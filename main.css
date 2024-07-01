@@ -1,0 +1,333 @@
+/* inter-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/inter-v13-latin-regular.woff2') format('woff2'); 
+}
+/* inter-600 - latin */
+@font-face {
+    font-display: swap; 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    src: url('fonts/inter-v13-latin-600.woff2') format('woff2'); 
+}
+/* inter-700 - latin */
+@font-face {
+    font-display: swap; 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/inter-v13-latin-700.woff2') format('woff2'); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --gray-light: #777B85;
+    --fw-xl: 700;
+    --fw-l: 600;
+    --fw-m: 400;
+    --fs-xl: 2.2rem;
+    --fs-l: 1.3rem;
+}
+
+@media(min-width: 740px){
+    :root{
+        --fs-xl: 4rem;
+        --fs-l: 1.8rem;
+    }
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--gray-light);
+}
+
+h1 {
+    color: white;
+    font-weight: var(--fw-xl);
+    font-size: var(--fs-xl);
+}
+
+h2 {
+    color: black;
+    font-weight: var(--fw-xl);
+    font-size: var(--fs-l);
+}
+
+h3{
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    line-height: 24px;
+}
+
+
+/* -----------------------------------------------------------
+UTILS 
+-----------------------------------------------------------*/
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.items-center{
+    align-items: center;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.container{
+    max-width: 950px;
+    margin: auto;
+}
+
+/* -----------------------------------------------------------
+HEADER
+-----------------------------------------------------------*/
+.main-header{
+    padding: 16px 24px;
+    font-size: 20px;
+    font-weight: var(--fw-l);
+    position: fixed;
+    width: 100%;
+    background-color: white;
+}
+
+.main-header ul {
+    gap: 24px;
+}
+
+#burger-menu {
+    display: none;
+}
+
+#burger-menu svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: block;
+  }
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+
+/* -----------------------------------------------------------
+HERO
+-----------------------------------------------------------*/
+.hero{
+    background-image: url("images/hero_img.jpg");
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    padding:0px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    height: 75vh;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 40px;
+    width: 300px;
+    color: white;
+    background-color: #5046E5;
+    border-radius: 8px;
+    margin: 10px auto;
+}
+
+/* -----------------------------------------------------------
+PRODUCTS
+-----------------------------------------------------------*/
+.products__header {
+    margin: 80px 20px 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.products__shop {
+    display: flex;
+    color:#5046E5;
+    align-items: center;
+    justify-content: right;
+}
+
+.products__shop svg {
+    width: 25px;
+}
+
+.product__items {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product__item {
+    line-height: 30px;
+    width: 23%;
+    margin: 10px 0px;
+}
+
+.product__item img {
+    width: 100%;
+}
+
+.product__price {
+    color: black;
+}
+
+
+/* -----------------------------------------------------------
+INFORMATION
+-----------------------------------------------------------*/
+
+.information {
+    background-color: #F9FAFC;
+    border-top: 1px solid #777B8566;
+    display: flex;
+    justify-content: space-around;
+    padding: 80px 0px 60px 0px;
+}
+
+.information__item {
+    justify-content: center;
+    text-align: center;
+    width: 25%;
+}
+
+.information h3{
+    font-weight: var(--fw-l);
+}
+
+.information__item img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    padding: 0px 0px 20px 0px;
+}
+
+.information__item p {
+    margin: 10px 0px;
+    font-size: 0.8rem;
+    line-height: 18px;
+}
+
+/* -----------------------------------------------------------
+FOOTER
+-----------------------------------------------------------*/
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 20px 60px 20px;
+}
+
+footer {
+    background-color: #F9FAFC;
+    border-top: 1px solid #777B8566;
+    display: block;
+}
+
+.footer__menu p {
+    padding: 5px;
+}
+
+form input {
+    width: 65%;
+    height: 33px;
+}
+
+form .btn {
+    width: auto;
+}
+
+.copyright {
+    display: block;
+    background-color: #F9FAFC;
+    text-align: center;
+    border-top: 1px solid #777B8566;
+    padding: 20px 0px;
+}
+
+/* -----------------------------------------------------------
+MEDIA QUERIES
+-----------------------------------------------------------*/
+@media (max-width: 755px) {
+    .main-header__nav{
+        display: none;
+    }
+
+    .main-header__social li:not(:last-child) {
+        display: none;
+    }
+
+    #burger-menu{
+        display: flex;
+        align-items: center;
+    }
+
+    .product__item {
+        line-height: 30px;
+        width: 45%;
+    }
+
+    .footer :last-child {
+        display: none;
+    }
+}
